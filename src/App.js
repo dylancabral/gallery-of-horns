@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+import React from "react";
+
+import Header from './Header';
+import HornedBeast from './HornedBeast';
+import Footer from "./Footer";
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <>
+        <Header/>
+        
+        <main>
+        <HornedBeast name="Horn Guy" description="this is actually a guy in a costume"/>
+        <HornedBeast name="Other Horn Guy" description="this is not a guy in a costume, who would have known"/>
+
+        </main>
+        <Footer/>
+      </>
+    )
+  }
 }
 
 export default App;
