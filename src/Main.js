@@ -1,12 +1,27 @@
 import React from "react";
 import HornedBeast from "./HornedBeast";
+import data from "./data.json";
+
 
 class main extends React.Component {
   render() {
+   let beastsArr = data.map((beast) => 
+      <HornedBeast
+        _id= {beast._id}
+        image_url={beast.image_url}
+        title={beast.title}
+        description={beast.description}
+        keyword={beast.keyword}
+        horns={beast.horns}
+        />
+    );
+    console.log(beastsArr);
     return (
-      <HornedBeast name="Horn Guy" description="this is actually a guy in a costume"/>
-        <HornedBeast name="Other Horn Guy" description="this is not a guy in a costume, who would have known"/>
-)}
+      <main>
+      {beastsArr}
+      </main>
+    )
+  }
 }
 
 export default main;
