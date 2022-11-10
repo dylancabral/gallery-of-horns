@@ -3,7 +3,15 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Time Estimate
+lab 02
 start at 4:57 pm
+estimated time a few hours, a few hours more than i hoped
+end next day around 9pm
+
+lab03
+start around 9pm
+estimated time i have no clue i was just happy to make it through thanks to my cohort mates
+finish 12:32am
 
 ## Available Scripts
 

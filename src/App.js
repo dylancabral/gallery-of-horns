@@ -2,8 +2,8 @@ import React from "react";
 import Header from './Header.js';
 import Main from "./Main.js";
 import Footer from "./Footer.js";
-import SelectedBeast from "./SelectedBeast.js";
 import './App.css';
+import SelectedBeast from "./SelectedBeast.js";
 import data from "./data.json";
 
 
@@ -17,12 +17,13 @@ class App extends React.Component {
       description:''
     }
   }
-  handelCloseModal = () => {
+  handleCloseModal = () => {
     this.setState({
       isModalShown: false
     })
   }
-  handelOpenModal = (title,src,description,alt) => {
+
+  handleOpenModal = (title,src,description,alt) => {
     this.setState({
       isModalShown: true,
       title: title,
@@ -39,12 +40,12 @@ class App extends React.Component {
         <Header />
         <Main
         data={data}
-          handelOpenModal={this.handelOpenModal}
+          handleOpenModal={this.handleOpenModal}
         />
         <Footer />
         <SelectedBeast
         isModalShown={this.state.isModalShown}
-        onHide={this.handelCloseModal}
+        onHide={this.handleCloseModal}
         title={this.state.title}
         image_url={this.state.image_url}
         description={this.state.description}

@@ -1,27 +1,27 @@
 import React from 'react'
-// import Button  from 'react-bootstrap/Button';
-import Modal  from 'react-bootstrap/Modal';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import Modal from 'react-bootstrap/Modal';
 
-class SelectedBeast extends React.Component{
+class SelectedBeast extends React.Component {
 
-  render(){
-    return(
-  <Modal
-          show={this.state.isModalShown}
-          onHide={this.props.onHide}
-          className='modal'
-        >
-          <Modal.Header closeButton></Modal.Header>
-          <Modal.Title>{this.props.title}</Modal.Title>
-          <Modal.Body>
-            <img className='modalImg' 
-            src={this.props.img_url} 
-            alt={this.props.title}/>
-            <p>{this.props.title}</p>
-          </Modal.Body>
-        </Modal>
+  render() {
+    return (
+      <Modal
+        show={this.props.isModalShown}
+        onHide={this.props.onHide}
+        className='modal'
+      >
+        <Modal.Header closeButton></Modal.Header>
+        <Modal.Title>{this.props.title}</Modal.Title>
+        <Modal.Body>
+          <img className='modalImg'
+            src={this.props.image_url}
+            alt={this.props.title} />
+          <p>{this.props.description}</p>
+        </Modal.Body>
+      </Modal>
 
-);
+    );
   }
 }
 
