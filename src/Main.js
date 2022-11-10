@@ -11,7 +11,7 @@ class main extends React.Component {
       <main>
    {this.props.data.map((beast,idx) => 
       <HornedBeast
-        _id= {beast._id}
+        _id= {beast.name}
         image_url={beast.image_url}
         title={beast.title}
         description={beast.description}

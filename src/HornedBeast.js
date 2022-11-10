@@ -8,12 +8,8 @@ class HornedBeast extends React.Component {
     super(props);
     this.state = {
       favorites: '',
-      
-      // helpMe:0
-
     };
   }
-
 
   HandleClick = () => {
     this.setState({
@@ -21,30 +17,17 @@ class HornedBeast extends React.Component {
     });
   };
 
-  /* needsHelp =()=>{
-     this.setState({
-       helpMe:true
-     });
-   };
- 
-   wasHelped = () =>{
-     this.setState({
-       helpMe:false
-     });
-   };
- */
   render() {
-    /*console.log(this.props)*/
     return (
         <Card style={{ width: '18rem' }}>
-          <Card.Title>{this.props.title}</Card.Title>
-          <Card.Img variant='top' 
+          <Card.Img 
+          onClick= {() => this.props.handleOpenModal(this.props.title, this.props.image_url, this.props.description)} 
           src={this.props.image_url} 
           alt={this.props.title}
           title={this.props.title} 
-          onClick= {() => this.props.handleOpenModal(this.props.title, this.props.image_url, this.props.description)} 
           />
           <Card.Body className='cardBody'>
+          <Card.Title>{this.props.title}</Card.Title>
             <Card.Text>{this.props.description}</Card.Text>
             <Card.Text>{this.state.favorites}</Card.Text>
             {/* <Button onClick={this.HandleFavorite}>favorite</Button> */}
