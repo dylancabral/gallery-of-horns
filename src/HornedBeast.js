@@ -1,34 +1,51 @@
 import React from "react";
-
+// import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card'
+import './HornedBeast.css'
 
 class HornedBeast extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      favorites: '',
+      // helpMe:0
+
+    };
+  }
+
+
+  HandleFavorite = () => {
+    this.setState({
+      favorites: this.state.favorites + '😍'
+    });
+  };
+
+  /* needsHelp =()=>{
+     this.setState({
+       helpMe:true
+     });
+   };
+ 
+   wasHelped = () =>{
+     this.setState({
+       helpMe:false
+     });
+   };
+ */
   render() {
     console.log(this.props)
     return (
-      <>
-      <h2>{this.props.title}</h2>
-      <img src={this.props.image_url} alt={this.props.description}/>
-      <p>{this.props.description}</p>
-      </>
-
-/*description
-: 
-"A unicorn and a narwhal nuzzling their horns"
-horns
-: 
-1
-image_url
-: 
-"http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg"
-keyword
-: 
-"narwhal"
-title
-: 
-"UniWhal"
-_id
-: 
-1*/
+        <Card style={{ width: '18rem' }}>
+          <Card.Title>{this.props.title}</Card.Title>
+          <Card.Img variant='top' src={this.props.image_url} alt={this.props.description} onClick={this.HandleFavorite} />
+          <Card.Body>
+            <Card.Text>{this.props.description}</Card.Text>
+            <Card.Text>{this.state.favorites}</Card.Text>
+            {/* <Button onClick={this.HandleFavorite}>favorite</Button> */}
+            {/* {this.state.helpMe ? 'I Need Help' : ' '}  */}
+            {/* /<Button onClick={this.needsHelp}>I Need Help</Button>  */}
+          </Card.Body>
+        </Card>
     )
   }
 }

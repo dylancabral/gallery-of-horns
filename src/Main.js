@@ -1,13 +1,13 @@
 import React from "react";
 import HornedBeast from "./HornedBeast";
 import data from "./data.json";
-
+import './Main.css'
 
 class main extends React.Component {
   render() {
    let beastsArr = data.map((beast) => 
       <HornedBeast
-        _id= {beast._id}
+        class= {beast._id}
         image_url={beast.image_url}
         title={beast.title}
         description={beast.description}
@@ -15,7 +15,7 @@ class main extends React.Component {
         horns={beast.horns}
         />
     );
-    console.log(beastsArr);
+    // console.log(beastsArr);
     return (
       <main>
       {beastsArr}

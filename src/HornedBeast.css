@@ -1,0 +1,19 @@
+.card{
+  border: solid black;
+  margin: 1rem;
+  text-align: center;
+  height: 30rem;
+  align-items: center;
+  background-color:gainsboro;
+}
+
+.card-title{
+  margin-top: 1rem;
+
+}
+
+.card-img-top{
+  height:auto;
+  width: 14rem;
+  justify-content: center;
+}
