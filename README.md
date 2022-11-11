@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Time Estimate
 lab 02
-start at 4:57 pm
+git start at 4:57 pm
 estimated time a few hours, a few hours more than i hoped
 end next day around 9pm
 
