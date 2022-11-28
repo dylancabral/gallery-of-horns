@@ -13,6 +13,11 @@ start around 9pm
 estimated time i have no clue i was just happy to make it through thanks to my cohort mates
 finish 12:32am
 
+lab 04
+start 6pm
+estimate was about 10 -15 hrs, this one was incredibly tough, very thankful to ian for helping me get sleep tonight;
+finish 10:28
+
 ## Available Scripts
 
 In the project directory, you can run:

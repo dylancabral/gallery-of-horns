@@ -14,7 +14,8 @@ class App extends React.Component {
       isModalShown: false,
       title: '',
       image_url:'',
-      description:''
+      description:'',
+      horns:''
     }
   }
   handleCloseModal = () => {
@@ -23,15 +24,18 @@ class App extends React.Component {
     })
   }
 
-  handleOpenModal = (title,src,description,alt) => {
+  handleOpenModal = (title,src,description,alt, horns) => {
     this.setState({
       isModalShown: true,
       title: title,
       image_url: src,
       description: description,
-      alt: alt
+      alt: alt,
+      horns:horns
     })
   }
+
+
 
   render() {
     return (
